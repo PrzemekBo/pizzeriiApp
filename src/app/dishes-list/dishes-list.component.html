@@ -9,11 +9,18 @@
     <div class="pasta">
       <button (click)="getPasta()">Makarony</button>
     </div>
-    <div class="beverage">
+    <div class="drink">
       <button (click)="getDrink()">Napoje</button>
+    </div>
+    <div>
+      <button routerLink="/summary">Zamowienie</button>
     </div>
   </div>
   <div class="dishes">
-    <app-dishes-list-item *ngFor="let dish of dishes" [dish]="dish"></app-dishes-list-item>
+    <app-dishes-list-item class="dish" *ngFor="let dish of dishes" [dish]="dish"></app-dishes-list-item>
   </div>
+  <div class="koszyk">
+    <app-shopping-card></app-shopping-card>
+  </div>
+
 </div>

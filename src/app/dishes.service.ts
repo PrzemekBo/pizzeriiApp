@@ -8,7 +8,13 @@ import {Dish} from './models/dish.model';
 })
 export class DishesService {
 
-  constructor(readonly http: HttpClient) { }
+  shoppingCardDishes: Dish[];
+  basketCost: number;
+
+  constructor(readonly http: HttpClient) {
+    this.shoppingCardDishes = [];
+    this.basketCost = 0;
+  }
 
   getDishes(): Observable<Dish[]> {
     return this.http.get<Dish[]>('/api/dishes');
@@ -29,7 +35,26 @@ export class DishesService {
     return this.http.get<Dish[]>('/api/dishes/?type=drink');
   }
 
+  getShoppingCardDishes() {
+    return this.shoppingCardDishes;
+  }
 
+
+  addDishToShoppingCard(dish: Dish): void {
+    this.shoppingCardDishes.push(dish);
+    this.calculateBasketCost();
+  }
+
+  calculateBasketCost(): number{
+    this.basketCost = 0;
+    this.shoppingCardDishes.forEach(dish => this.basketCost += parseFloat(dish.price));
+    return this.basketCost;
+  }
+
+  deleteFromBasket(index: number) {
+    this.shoppingCardDishes.splice(index, 1);
+    this.calculateBasketCost();
+  }
 
 
 }

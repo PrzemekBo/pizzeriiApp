@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Dish} from '../models/dish.model';
+import {DishesService} from '../dishes.service';
+
 
 @Component({
   selector: 'app-dishes-list-item',
@@ -10,7 +12,12 @@ export class DishesListItemComponent {
 
   @Input() dish: Dish;
 
-  constructor() { }
+  constructor(readonly service: DishesService) { }
+
+  addFoodToCard() {
+    this.service.addDishToShoppingCard(this.dish);
+  }
+
 
 
 }

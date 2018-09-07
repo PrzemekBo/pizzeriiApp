@@ -13,7 +13,7 @@ export class DishesListComponent implements OnInit, OnDestroy {
   dishes: Dish[];
   sub: Subscription;
 
-  constructor(readonly service: DishesService) {
+  constructor(readonly service: DishesService,) {
   }
 
   ngOnInit() {

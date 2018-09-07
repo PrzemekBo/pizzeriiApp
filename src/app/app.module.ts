@@ -11,19 +11,22 @@ import { DishesListItemComponent } from './dishes-list-item/dishes-list-item.com
 
 import { DishesListComponent } from './dishes-list/dishes-list.component';
 import {HttpClientModule} from '@angular/common/http';
+import {ShoppingCardComponent} from './shopping-card/shopping-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DishesListItemComponent,
-    DishesListComponent
+    DishesListComponent,
+    ShoppingCardComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule
-   /* ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })*/
   ],
   providers: [],
   bootstrap: [AppComponent]

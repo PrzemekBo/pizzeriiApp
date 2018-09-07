@@ -4,9 +4,11 @@
       <h3>{{dish.name}}</h3>
       <p>{{dish.description}}</p>
     </div>
-    <div>
+    <div class="price">
       <p>Cena: {{dish.price}}</p>
-      <button>Dodaj do koszyka</button>
+    </div>
+    <div class="button-add">
+      <button class="add-to-basket" (click)="addFoodToCard()">Dodaj do koszyka</button>
     </div>
   </div>
 </div>

@@ -1,20 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <header>
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  </header>
-<!--  <nav>
-    <button>Pizza</button>
-    <button>Makarony</button>
-    <button>Napoje</button>
-  </nav>
-  <section>
-    <article id="order">Twoje zamówienie</article>
-    <article id="dishes">
-     &lt;!&ndash; <app-dishes></app-dishes>&ndash;&gt;
-    </article>
-  </section>-->
+<nav class="nav-bar">
+  <a id="basket" routerLink="/shopping-card">Koszyk</a>
+  <a>Zaloguj</a>
+</nav>
+<div class="app-content">
+  <h1>
+    {{ title }}!
+  </h1>
 </div>
 <router-outlet></router-outlet>
