@@ -1,0 +1,10 @@
+<div class="menu">
+  <h2>Lista zamówień</h2>
+  <div class="dishes">
+    <app-orders-list-item class="order" *ngFor="let order of orders" [order]="order"></app-orders-list-item>
+  </div>
+
+
+
+</div>
+<a routerLink="/">Powrót</a>

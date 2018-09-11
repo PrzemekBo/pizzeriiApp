@@ -29,7 +29,7 @@ export class ShoppingCardComponent implements OnInit {
   }
 
 
-  setBasketCost(): void{
+  setBasketCost(): void {
     document.getElementById('basket-cost').innerText = this.service.calculateBasketCost().toString();
   }
 

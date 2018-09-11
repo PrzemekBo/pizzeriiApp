@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, pipe} from 'rxjs';
 import {Dish} from './models/dish.model';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,8 @@ export class DishesService {
   }
 
   getDishes(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes');
+    return this.http.get<Dish[]>('/api/dishes')
+  .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getDishe(id: number): Observable<Dish> {
@@ -25,14 +27,17 @@ export class DishesService {
   }
 
   getPizza(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=pizza');
+    return this.http.get<Dish[]>('/api/dishes/?type=pizza')
+  .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
   getPasta(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=pasta');
+    return this.http.get<Dish[]>('/api/dishes/?type=pasta')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getDrink(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes/?type=drink');
+    return this.http.get<Dish[]>('/api/dishes/?type=drink')
+      .pipe(map(dish => dish.filter(av => av.isAvailable)));
   }
 
   getShoppingCardDishes() {

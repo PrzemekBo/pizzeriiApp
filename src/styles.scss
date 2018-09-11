@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 body{
-  background-image: url("https://www.google.pl/url?sa=i&rct=j&q=&esrc=s&source=images&c
-  d=&cad=rja&uact=8&ved=2ahUKEwic9uDJ7ajdAhWRZVAKHaOvDhQQjRx6BAgBEAU&url=https%3A%2F%2Fw
-  ww.bbc.com%2Ffood%2Frecipes%2Fquick_pepperoni_pizza_64616&psig=AOvVaw16Y-3ebUK-tz7NxTZ
-  DcdCK&ust=1536408433964417");
+  background-image: url("/src/assets/photo/quick_pepperoni_pizza_64616_16x9 (1).jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+head{
+  background-color: black;
 }

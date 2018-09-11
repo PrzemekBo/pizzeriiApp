@@ -13,7 +13,8 @@ export class DishesListComponent implements OnInit, OnDestroy {
   dishes: Dish[];
   sub: Subscription;
 
-  constructor(readonly service: DishesService,) {
+
+  constructor(readonly service: DishesService) {
   }
 
   ngOnInit() {
@@ -39,6 +40,11 @@ export class DishesListComponent implements OnInit, OnDestroy {
 
   getDrink(): void {
     this.sub = this.service.getDrink()
+      .subscribe(res => this.dishes = res);
+  }
+
+  getAllDishes(): void {
+    this.sub = this.service.getDishes()
       .subscribe(res => this.dishes = res);
   }
 }

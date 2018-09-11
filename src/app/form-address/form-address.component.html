@@ -1,0 +1,38 @@
+<div  class="form-address-main">
+<h2>Adres dostawy</h2>
+<form [formGroup]="angularForm" id="address-form">
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <td>Imie:</td>
+      <td><input type="text" formControlName="firstName"></td>
+    </tr>
+    <tr>
+      <td>Nazwisko:</td>
+      <td><input type="text" formControlName="lastName"></td>
+    </tr>
+    <tr>
+      <td>Telefon:</td>
+      <td><input type="tel" formControlName="telephone"></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" formControlName="email"></td>
+    </tr>
+    <tr>
+      <td>Miasto:</td>
+      <td><input type="text" formControlName="city"></td>
+    </tr>
+    <tr>
+      <td>Ulica:</td>
+      <td><input type="text" formControlName="street"></td>
+    </tr>
+  </table>
+</form>
+<button type="submit" (click)="createOrder()">Zloz zamowienie</button>
+<app-shopping-card></app-shopping-card>
+</div>
