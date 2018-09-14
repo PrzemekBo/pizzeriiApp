@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Dish} from '../models/dish.model';
 import {DishesService} from '../dishes.service';
+import {AccessService} from '../access/access.service';
 
 
 @Component({
@@ -12,7 +13,9 @@ export class DishesListItemComponent {
 
   @Input() dish: Dish;
 
-  constructor(readonly service: DishesService) { }
+  constructor(
+    readonly service: DishesService,
+    readonly accessService: AccessService) { }
 
   addFoodToCard() {
     this.service.addDishToShoppingCard(this.dish);

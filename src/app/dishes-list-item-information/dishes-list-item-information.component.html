@@ -1,0 +1,10 @@
+<div class="dishes">
+  <p>Id : {{dish.id}}</p>
+  <p>Name : {{dish.name}}</p>
+  <p>Is available : {{dish.isAvailable}}</p>
+  <p>Description : {{dish.description}}</p>
+  <p>Type : {{dish.type}}</p>
+  <p>Price : {{dish.price}}</p>
+  <button (click)="changeStatusOfDish()">Zmien dostepnosc</button>
+</div>
+<button [routerLink]='["/"]'>Wroc</button>

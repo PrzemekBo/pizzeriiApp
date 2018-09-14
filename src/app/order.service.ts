@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from './models/order.model';
 import {Observable} from 'rxjs';
@@ -8,7 +8,8 @@ import {Observable} from 'rxjs';
 })
 export class OrderService {
 
-  constructor(readonly http: HttpClient) { }
+  constructor(readonly http: HttpClient) {
+  }
 
   createOrder(order: Order): Observable<Order> {
     return this.http.post<Order>('/api/orders', order);
@@ -19,12 +20,12 @@ export class OrderService {
   }
 
   getOrder(id: number): Observable<Order> {
-    return this.http.get<Order>('/api/orders/${id}');
+    return this.http.get<Order>(`/api/orders/${id}`);
   }
+
 
   changeOrderStatus(order: Order): Observable<Order> {
     return this.http.put<Order>(`/api/orders/${order.id}`, order);
-
   }
 
 

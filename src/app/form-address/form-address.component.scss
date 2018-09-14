@@ -1,8 +1,44 @@
+
 .form-address-main{
-  display: flex;
+
+  margin: 0 auto;
+  height: 400px;
+  display: table;
   justify-content: right;
   background-color: orange;
-  width: 45%;
+  width: 40%;
   border: solid 2px;
+}
+
+
+label {
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: 5% 10%;
+}
+
+.address-title{
+  margin-bottom: inherit;
 
 }
+
+
+#address-form{
+  align-content: flex-end;
+  display:flex;
+
+}
+
+#order{
+  display: flex;
+  position: absolute;
+  font-family:Arial;
+  font-size:10px;
+  padding:10px 10px;
+  height: 100px;
+  width: 100px;
+  border-radius:28px;
+}
+
+

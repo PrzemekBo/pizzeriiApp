@@ -4,10 +4,12 @@ h1{
 }
 
 .basket {
-  display: flex;
-  justify-content: center;
-  background-color: gray;
-  width: 25%;
+  margin: 0 auto;
+  height: 400px;
+  display: table;
+  justify-content: right;
+  background-color: orange;
+  width: 40%;
   border: solid 2px;
 }
 

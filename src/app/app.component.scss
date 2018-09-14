@@ -1,4 +1,4 @@
-header {
+/*header {
   text-align: center;
   line-height: 1.1;
   font-weight: normal;
@@ -13,15 +13,18 @@ header {
 header > h1 {
   color: white;
   padding-bottom: 5px;
-}
+}*/
 
 nav {
   display: flex;
   justify-content: center;
   background-color: #dcf6ff;
+  height: 40px;
+
+
 
 }
-
+/*
 nav > button {
   border: 2px orange;
   text-align:center;
@@ -42,6 +45,14 @@ nav > button {
 section {
   display: flex;
   justify-content: space-around;
+}*/
+.app-content{
+  background-color: cornflowerblue ;
+  height: 100%;
+  margin-top: 20px;
+
+
+
 }
 
 

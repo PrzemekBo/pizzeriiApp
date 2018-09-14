@@ -19,8 +19,6 @@ export class ShoppingCardComponent implements OnInit {
 
   getShoppingCardDishes(): void {
     this.dishes = this.service.getShoppingCardDishes();
-    this.setBasketCost();
-
   }
 
 
@@ -29,23 +27,9 @@ export class ShoppingCardComponent implements OnInit {
   }
 
 
-  setBasketCost(): void {
-    document.getElementById('basket-cost').innerText = this.service.calculateBasketCost().toString();
-  }
 
-  setIdsForBasketItems(): string {
-    return 'item_' + ++this.index;
-  }
-
-  setIdsForButtons(): string {
-    return 'button_item_' + this.index;
-  }
-
-
-  deleteFromBasket(index: number, event: Event) {
+  deleteFromBasket(index: number) {
     this.service.deleteFromBasket(index);
-    this.setBasketCost();
     this.index = 0;
-    event.stopPropagation();
   }
 }

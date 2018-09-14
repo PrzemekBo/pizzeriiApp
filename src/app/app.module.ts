@@ -14,7 +14,9 @@ import {ShoppingCardComponent} from './shopping-card/shopping-card.component';
 import { FormAddressComponent } from './form-address/form-address.component';
 import { OrdersListComponent } from './orders-list/orders-list.component';
 import { OrdersListItemComponent } from './orders-list-item/orders-list-item.component';
-
+import { OrdersListItemInformationComponent } from './orders-list-item-information/orders-list-item-information.component';
+import { AccessComponent } from './access/access.component';
+import { DishesListItemInformationComponent } from './dishes-list-item-information/dishes-list-item-information.component';
 
 
 @NgModule({
@@ -26,6 +28,9 @@ import { OrdersListItemComponent } from './orders-list-item/orders-list-item.com
     FormAddressComponent,
     OrdersListComponent,
     OrdersListItemComponent,
+    OrdersListItemInformationComponent,
+    AccessComponent,
+    DishesListItemInformationComponent,
 
 
   ],

@@ -3,7 +3,7 @@
     <div class="menu">
       <button (click)="getAllDishes()">Menu</button>
     </div>
-    <div class="pizza">
+    <div class="pizza" *ngIf="!accessService.isLogged">
       <button (click)="getPizza()">Pizza</button>
     </div>
     <div class="pasta">
@@ -15,12 +15,16 @@
     <div>
       <button routerLink="/summary">Zamowienie</button>
     </div>
+
+
+    <div>
+      <button routerLink="/orders" *ngIf="accessService.isLogged">Orders list</button>
+    </div>
   </div>
-  <div class="dishes">
+
+  <div class="dishes" *ngIf="dishes$ | async as dishes">
     <app-dishes-list-item class="dish" *ngFor="let dish of dishes" [dish]="dish"></app-dishes-list-item>
   </div>
-  <div class="koszyk">
-    <app-shopping-card></app-shopping-card>
-  </div>
+
 
 </div>

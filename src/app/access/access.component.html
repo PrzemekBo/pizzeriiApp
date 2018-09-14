@@ -1,0 +1,12 @@
+<form [formGroup]="accessForm">
+  <label>Name:
+    <input type="text" formControlName="name"/>
+  </label>
+  <label>Password:
+    <input type="password" formControlName="password"/>
+  </label>
+  <button type="submit" (click)="login()">Zaloguj</button>
+
+</form>
+
+<a class="backToMenu" href="#" routerLink="/">Strona glowna</a>

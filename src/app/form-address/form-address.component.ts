@@ -18,7 +18,7 @@ export class FormAddressComponent implements OnInit {
   dishes: Dish[];
   dishesIds: number[];
 
-  angularForm = new FormGroup({
+  addressForm = new FormGroup({
     firstName: new FormControl(),
     lastName: new FormControl(),
     telephone: new FormControl(),
@@ -40,17 +40,14 @@ export class FormAddressComponent implements OnInit {
 
 
   createOrder(): void {
+    this.order = this.addressForm.value;
     this.order.dishIds = this.dishesIds;
-    this.order.firstName = this.angularForm.get('firstName').value;
-    this.order.lastName = this.angularForm.get('lastName').value;
-    this.order.city = this.angularForm.get('city').value;
-    this.order.street = this.angularForm.get('street').value;
-    this.order.email = this.angularForm.get('email').value;
-    this.order.telephone = this.angularForm.get('telephone').value;
     this.order.state = 'Accepted';
     this.order.date = new Date();
     this.sub = this.orderService.createOrder(this.order).subscribe();
+    alert('Dodano zamowienie.');
   }
+
 
   getDishes(): void {
     this.dishes = this.dishesService.getShoppingCardDishes();

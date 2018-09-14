@@ -1,50 +1,43 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Dish} from '../models/dish.model';
-import {Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 import {DishesService} from '../dishes.service';
+import {AccessService} from '../access/access.service';
 
 @Component({
   selector: 'app-dishes-list',
   templateUrl: './dishes-list.component.html',
   styleUrls: ['./dishes-list.component.scss']
 })
-export class DishesListComponent implements OnInit, OnDestroy {
+export class DishesListComponent implements OnInit {
 
-  dishes: Dish[];
-  sub: Subscription;
+  dishes$: Observable<Dish[]>;
 
-
-  constructor(readonly service: DishesService) {
+  constructor(readonly accessService: AccessService,
+              private readonly service: DishesService) {
   }
 
   ngOnInit() {
-    this.sub = this.service.getDishes()
-      .subscribe(res => this.dishes = res);
+    this.getAllDishes();
   }
 
-
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
-
-  }
 
   getPizza(): void {
-    this.sub = this.service.getPizza()
-      .subscribe(res => this.dishes = res);
+    this.dishes$ = this.service.getPizza();
+
+
   }
 
+
   getPasta(): void {
-    this.sub = this.service.getPasta()
-      .subscribe(res => this.dishes = res);
+    this.dishes$ = this.service.getPasta();
   }
 
   getDrink(): void {
-    this.sub = this.service.getDrink()
-      .subscribe(res => this.dishes = res);
+    this.dishes$ = this.service.getDrink();
   }
 
   getAllDishes(): void {
-    this.sub = this.service.getDishes()
-      .subscribe(res => this.dishes = res);
+    this.dishes$ = this.service.getDishes();
   }
 }
