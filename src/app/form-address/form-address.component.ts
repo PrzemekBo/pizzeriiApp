@@ -3,8 +3,8 @@ import {Subscription} from 'rxjs';
 import {Dish} from '../models/dish.model';
 import {Order} from '../models/order.model';
 import {FormControl, FormGroup} from '@angular/forms';
-import {DishesService} from '../dishes.service';
-import {OrderService} from '../order.service';
+import {DishesService} from '../dishes-list/dishes.service';
+import {OrderService} from '../orders-list/order.service';
 
 @Component({
   selector: 'app-form-address',

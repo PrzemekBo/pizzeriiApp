@@ -3,10 +3,10 @@
     {
       "id": 1,
       "name": "Pizza Margherita",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22"
+      "price": 22
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50"
+      "price": 23
     },
     {
       "id": 2,
@@ -22,15 +22,15 @@
       "isAvailable": true,
       "description": "Zimne piwo",
       "type": "drink",
-      "price": "13.90"
+      "price": 24
     },
     {
       "id": 4,
       "name": "Spagetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "pasta",
-      "price": "14"
+      "price": 24
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "isAvailable": false,
       "description": "Sos boloński z szynką i kukurydzą",
       "type": "pasta",
-      "price": "17.50"
+      "price": 17.5
     }
   ],
   "users": [
@@ -75,6 +75,18 @@
       "state": "Accepted",
       "date": "2018-09-13T21:03:26.945Z",
       "id": 2
+    },
+    {
+      "firstName": null,
+      "lastName": null,
+      "telephone": null,
+      "email": null,
+      "city": null,
+      "street": null,
+      "dishIds": [],
+      "state": "Accepted",
+      "date": "2018-09-14T11:41:48.010Z",
+      "id": 3
     }
   ]
 }

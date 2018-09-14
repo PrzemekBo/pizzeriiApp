@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Dish} from '../models/dish.model';
 import {Observable} from 'rxjs';
-import {DishesService} from '../dishes.service';
+import {DishesService} from './dishes.service';
 import {AccessService} from '../access/access.service';
 
 @Component({
@@ -12,6 +12,7 @@ import {AccessService} from '../access/access.service';
 export class DishesListComponent implements OnInit {
 
   dishes$: Observable<Dish[]>;
+
 
   constructor(readonly accessService: AccessService,
               private readonly service: DishesService) {

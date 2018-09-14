@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Dish} from './models/dish.model';
+import {Dish} from '../models/dish.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -53,7 +54,7 @@ export class DishesService {
 
   calculateBasketCost(): number {
     this.basketCost = 0;
-    this.shoppingCardDishes.forEach(dish => this.basketCost += parseFloat(dish.price));
+    this.shoppingCardDishes.forEach(dish => this.basketCost += dish.price);
     return this.basketCost;
   }
 

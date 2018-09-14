@@ -9,5 +9,6 @@ import {AccessService} from './access/access.service';
 export class AppComponent {
   title = 'pizzeriiApp';
 
-  constructor(readonly accessService: AccessService) {};
+  constructor(readonly accessService: AccessService) {
+  }
 }

@@ -1,23 +1,23 @@
 <div class="menu">
-  <div class="menu-buttons">
+  <div class="menu-buttons" >
     <div class="menu">
       <button (click)="getAllDishes()">Menu</button>
     </div>
     <div class="pizza" *ngIf="!accessService.isLogged">
       <button (click)="getPizza()">Pizza</button>
     </div>
-    <div class="pasta">
+    <div class="pasta" *ngIf="!accessService.isLogged">
       <button (click)="getPasta()">Makarony</button>
     </div>
-    <div class="drink">
+    <div class="drink" *ngIf="!accessService.isLogged">
       <button (click)="getDrink()">Napoje</button>
     </div>
-    <div>
+    <div *ngIf="!accessService.isLogged">
       <button routerLink="/summary">Zamowienie</button>
     </div>
 
 
-    <div>
+    <div >
       <button routerLink="/orders" *ngIf="accessService.isLogged">Orders list</button>
     </div>
   </div>

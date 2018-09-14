@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Dish} from '../models/dish.model';
 import {Subscription} from 'rxjs';
-import {DishesService} from '../dishes.service';
+import {DishesService} from '../dishes-list/dishes.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({

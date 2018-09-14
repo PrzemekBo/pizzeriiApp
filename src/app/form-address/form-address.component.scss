@@ -1,44 +1,34 @@
-
 .form-address-main{
-
-  margin: 0 auto;
-  height: 400px;
-  display: table;
-  justify-content: right;
-  background-color: orange;
-  width: 40%;
-  border: solid 2px;
+  display: flex;
+  justify-content: center;
 }
 
 
-label {
+.address-form{
+  text-align: center;
+  width: 100%;
   flex: 1;
-  padding: 20px;
-  margin-bottom: 20px;
-  grid-template-columns: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  background-color: #4CAF50;
+  align-items: center;
 }
 
 .address-title{
-  margin-bottom: inherit;
-
+  flex: 1;
+  justify-content: center;
 }
 
-
-#address-form{
-  align-content: flex-end;
-  display:flex;
-
+.address-form-iputs{
+  flex: 3;
+  width: 100%;
+  margin-right: auto;
+  justify-content: center;
 }
 
-#order{
-  display: flex;
-  position: absolute;
-  font-family:Arial;
-  font-size:10px;
-  padding:10px 10px;
-  height: 100px;
-  width: 100px;
-  border-radius:28px;
+.shoppingCard{
+  width: 60%;
+  background-color: #4CAF50;
+
+
 }
-
-

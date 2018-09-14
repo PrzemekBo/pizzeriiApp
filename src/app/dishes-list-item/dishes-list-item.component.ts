@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Dish} from '../models/dish.model';
-import {DishesService} from '../dishes.service';
+import {DishesService} from '../dishes-list/dishes.service';
 import {AccessService} from '../access/access.service';
 
 

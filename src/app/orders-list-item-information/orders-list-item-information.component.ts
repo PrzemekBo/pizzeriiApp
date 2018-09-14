@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Order} from '../models/order.model';
 import {Subscription} from 'rxjs';
-import {OrderService} from '../order.service';
+import {OrderService} from '../orders-list/order.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({

@@ -1,5 +1,5 @@
 
-.backToMenu {
+button {
   background-color:#44c767;
   -moz-border-radius:28px;
   -webkit-border-radius:28px;
@@ -14,10 +14,10 @@
   text-decoration:none;
   text-shadow:0px -2px 0px #2f6627;
 }
-.backToMenu:hover {
+.button:hover {
   background-color:#88cc64;
 }
-.backToMenu:active {
+.button:active {
   position:relative;
   top:1px;
 }
@@ -25,5 +25,40 @@
 form{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.login-panel{
+  display: flex;
   justify-content: center;
+  padding-top: 60px;
+}
+
+input{
+  background-color:#44c767;
+
+  border-radius:28px;
+  border:2px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:14px 43px;
+
+}
+
+label{
+  background-color:#44c767;
+
+  border-radius:28px;
+  border:2px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:14px 43px;
+
 }

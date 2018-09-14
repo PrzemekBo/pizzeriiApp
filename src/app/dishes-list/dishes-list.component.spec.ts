@@ -1,7 +1,7 @@
 import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 
 import { DishesListComponent } from './dishes-list.component';
-import {DishesService} from '../dishes.service';
+import {DishesService} from './dishes.service';
 import {Dish} from '../models/dish.model';
 
 describe('DishesListComponent', () => {
