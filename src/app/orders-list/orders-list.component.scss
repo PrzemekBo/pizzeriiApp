@@ -1,0 +1,30 @@
+.menu{
+  flex-flow: column;
+  margin-left: 20%;
+  margin-top: 25px;
+  position: absolute;
+  background-color: #ccd6d0;
+  opacity: 0.85;
+  width: 750px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  display: flex;
+  z-index: 15;
+}
+.back-button{
+  background-color: #db5212;
+
+  border-radius:28px;
+  border:2px solid #a36f0f;
+  display:inline-block;
+  cursor:pointer;
+  color: #010203;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:6px 10px;
+  text-decoration:none;
+  margin-bottom: 20px;
+
+}

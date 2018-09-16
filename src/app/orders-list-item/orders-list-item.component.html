@@ -1,11 +1,14 @@
 <div class="menu">
+<!--  <div>Id zamowienia: {{order.id}}</div>-->
   <div class="order">
-    <h2>Id zamowienia: {{order.id}}</h2>
+    <p>Id zamowienia: {{order.id}}</p>
     <p>Imie zamawiającego: {{order.firstName}}</p>
     <p>Nazwisko zamawiającego: {{order.lastName}}</p>
     <p> Id dania: {{order.dishIds}}</p>
-    <button [routerLink]="['/orders', order.id]">Podglad zamowienia</button>
-
   </div>
+  <div>
+    <button class="button-more" [routerLink]="['/orders', order.id]">Podglad zamowienia</button>
+  </div>
+
 
 </div>
