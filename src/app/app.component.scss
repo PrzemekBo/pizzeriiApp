@@ -14,8 +14,44 @@ header > h1 {
   color: white;
   padding-bottom: 5px;
 }*/
+.main-menu{
+  display: flex;
 
-nav {
+}
+
+
+.nav-bar{
+  display: flex;
+  order: 2;
+  flex: 1;
+  a{
+    flex-grow: 1;
+
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid;
+  }
+
+}
+
+.app-content{
+
+  flex: 2;
+  order: 1;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid;
+  font-family: Marker Felt, fantasy;
+  letter-spacing: 3px;
+
+}
+
+/*nav {
   display: flex;
   justify-content: center;
   background-color: #dcf6ff;
@@ -23,7 +59,7 @@ nav {
 
 
 
-}
+}*/
 /*
 nav > button {
   border: 2px orange;
@@ -46,6 +82,7 @@ section {
   display: flex;
   justify-content: space-around;
 }*/
+/*
 .app-content{
   background-color: cornflowerblue ;
   height: 100%;
@@ -54,6 +91,7 @@ section {
 
 
 }
+*/
 
 
 

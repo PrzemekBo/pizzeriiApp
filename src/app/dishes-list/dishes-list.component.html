@@ -15,10 +15,8 @@
     <div *ngIf="!accessService.isLogged">
       <button routerLink="/summary">Zamowienie</button>
     </div>
-
-
-    <div >
-      <button routerLink="/orders" *ngIf="accessService.isLogged">Orders list</button>
+    <div *ngIf="accessService.isLogged">
+      <button routerLink="/orders" >Orders list</button>
     </div>
   </div>
 

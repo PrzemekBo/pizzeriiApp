@@ -1,24 +1,35 @@
+.menu{
+  background-color: #ccd6d0;
+  opacity: 0.85;
+  width: 750px;
+  padding-left: 30px;
+  display: flex;
+
+
+}
+
+
 .item {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
-.price{
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
 
-.button-add {
-  display: flex;
-  align-items: center;
-}
 
-.description {
-  margin-right: 50px;
-}
 .add-to-basket{
-  background-color: #4CAF50; 
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 70%;
+}
+.button-preview{
+  background-color: #af5224;
   border: none;
   color: white;
   padding: 15px 32px;

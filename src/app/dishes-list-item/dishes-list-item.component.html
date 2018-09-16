@@ -1,6 +1,5 @@
 <div class="menu">
   <div class="item" *ngIf="accessService.isLogged || dish.isAvailable===true">
-    <!--//TODO-->
     <div class="description">
       <h3>{{dish.name}}</h3>
       <p>{{dish.description}}</p>
@@ -11,7 +10,7 @@
     <div class="button-add">
       <button class="add-to-basket" (click)="addFoodToCard()">Dodaj do koszyka</button>
     </div>
-    <div>
+    <div class="button-more">
       <button class="button-preview" [routerLink]="['/dishes', dish.id]" *ngIf="accessService.isLogged">Szczegoly</button>
     </div>
   </div>

@@ -1,14 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div class="main-menu">
 <nav class="nav-bar">
   <a id="basket" routerLink="/shopping-card" *ngIf="!accessService.isLogged">Koszyk</a>
   <a routerLink="/orders-list">Zamówienia</a>
   <a routerLink="/login">Zaloguj</a>
   <a (click)="accessService.logout()" *ngIf="accessService.isLogged">Wyloguj</a>
-
 </nav>
+
 <div class="app-content">
   <h1 routerLink="/">
     {{ title }}!
   </h1>
+</div>
 </div>
 <router-outlet></router-outlet>
