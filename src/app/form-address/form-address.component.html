@@ -2,39 +2,39 @@
 
 
   <div [formGroup]="addressForm" class="address-form">
-    <div id="address-title">
-      <h2>Adres dostawy</h2>
-    </div>
-    <div class="address-form-iputs">
-    <div>First Name:
-      <input type="text" formControlName="firstName">
-    </div>
-    <div>Last name:
-      <input type="text" formControlName="lastName">
-    </div>
-    <div>Telephone:
-      <input type="tel" formControlName="telephone">
-    </div>
-    <div>Email:
-      <input type="email" formControlName="email">
-    </div>
-    <div>City:
-      <input type="text" formControlName="city">
-    </div>
-    <div>Street:
-      <input type="text" formControlName="street">
-    </div>
 
-    </div>
-    <div id="buttonOrderDiv">
-      <button class="order" type="submit" (click)="createOrder()">Zloz zamowienie</button>
+    <div class="address-form-iputs">
+      <div id="address-title">
+        <h2>Adres dostawy</h2>
+      </div>
+      <div>First Name:
+        <input type="text" formControlName="firstName">
+      </div>
+      <div>Last name:
+        <input type="text" formControlName="lastName">
+      </div>
+      <div>Telephone:
+        <input type="tel" formControlName="telephone">
+      </div>
+      <div>Email:
+        <input type="email" formControlName="email">
+      </div>
+      <div>City:
+        <input type="text" formControlName="city">
+      </div>
+      <div>Street:
+        <input type="text" formControlName="street">
+      </div>
+      <div id="buttonOrderDiv">
+        <button class="order" type="submit" (click)="createOrder()">Zloz zamowienie</button>
+
+      </div>
     </div>
   </div>
-
 
   <div class="shoppingCard">
     <app-shopping-card></app-shopping-card>
   </div>
-
 </div>
+
 

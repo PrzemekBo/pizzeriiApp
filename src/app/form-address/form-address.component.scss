@@ -1,9 +1,62 @@
 .form-address-main{
   display: flex;
+  justify-content: flex-start;
+
+}
+.address-form{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 25px;
+
+  margin-left: 50px;
+
+  width: 300px;
+  background-color: #ccd6d0;
+  opacity: 0.85;
+}
+.shoppingCard{
+  margin-right: 300%;
+
+}
+.address-form-iputs{
+  display: flex;
+  flex-flow: column;
   justify-content: center;
+  div{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+  }
+}
+.order{
+  background-color:#1880db;
+
+  border-radius:28px;
+  border:2px solid #2136a3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:6px 10px;
+  text-decoration:none;
+}
+
+.order:hover {
+  background-color:#3434f7;
+}
+.order:active {
+  position:relative;
+  top:1px;
 }
 
 
+
+
+/*
 .address-form{
   text-align: center;
   width: 100%;
@@ -29,6 +82,5 @@
 .shoppingCard{
   width: 60%;
   background-color: #4CAF50;
-
-
 }
+*/
