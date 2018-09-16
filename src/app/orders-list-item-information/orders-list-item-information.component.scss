@@ -1,0 +1,48 @@
+.orders{
+  flex-flow: column;
+  margin-left: 15%;
+  margin-top: 25px;
+  position: absolute;
+  background-color: #ccd6d0;
+  opacity: 0.85;
+  width: 750px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  display: flex;
+  z-index: 15;
+  font-weight:bold;
+}
+.buttons{
+  flex-grow: 1;
+}
+
+
+button{
+
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:#1880db;
+
+  border-radius:28px;
+  border:2px solid #0a43a3;
+  display:inline-block;
+  cursor:pointer;
+  color: #fbfcff;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:6px 10px;
+  text-decoration:none;
+  margin-bottom: 10px;
+
+}
+
+button:hover {
+  background-color: #1c42f7;
+}
+button:active {
+  position:relative;
+  top:1px;
+}
+

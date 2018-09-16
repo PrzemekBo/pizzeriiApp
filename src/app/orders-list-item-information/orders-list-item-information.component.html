@@ -1,18 +1,24 @@
-<div class="order">
-  <h2>Id: {{order.id}}</h2>
-  <p>Imie: {{order.firstName}}</p>
-  <p>Nazwisko: {{order.lastName}}</p>
-  <p>Dania: {{order.dishIds}}</p>
-  <p>Status: {{order.state}}</p>
-  <p>Data: {{order.date}}</p>
-  <p>Miasto: {{order.city}}</p>
-  <p>Ulica: {{order.street}}</p>
-  <p>Telefon: {{order.telephone}}</p>
-  <p>Email: {{order.email}}</p>
-</div>
-<button (click)="changeStatusOfOrderToAccepted()">Zaakceptowane</button>
-<button (click)="changeStatusOfOrderToSend()">Wyslane</button>
-<button (click)="changeStatusOfOrderToDelivered()">Dostarczone</button>
-<button (click)="changeStatusOfOrderToProblems()">Problemy</button>
+<div class="orders">
+  <div>
+    <h2>Id: {{order.id}}</h2>
+    <p>Imie: {{order.firstName}}</p>
+    <p>Nazwisko: {{order.lastName}}</p>
+    <p>Dania: {{order.dishIds}}</p>
+    <p>Status: {{order.state}}</p>
+    <p>Data: {{order.date}}</p>
+    <p>Miasto: {{order.city}}</p>
+    <p>Ulica: {{order.street}}</p>
+    <p>Telefon: {{order.telephone}}</p>
+    <p>Email: {{order.email}}</p>
+  </div>
+  <div class="buttons">
+    <button (click)="changeStatusOfOrderToAccepted()">Zaakceptowane</button>
+    <button (click)="changeStatusOfOrderToSend()">Wyslane</button>
+    <button (click)="changeStatusOfOrderToDelivered()">Dostarczone</button>
+    <button (click)="changeStatusOfOrderToProblems()">Problemy</button>
+    <button routerLink="/orders-list">Powrot</button>
+  </div>
 
-<a routerLink="/orders-list">Powrot</a>
+</div>
+
+
