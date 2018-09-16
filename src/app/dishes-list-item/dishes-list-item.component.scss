@@ -3,6 +3,8 @@
   opacity: 0.85;
   width: 750px;
   padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
   display: flex;
 
 
@@ -18,25 +20,39 @@
 
 
 .add-to-basket{
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 70%;
+  background-color:#1880db;
+
+  border-radius:28px;
+  border:2px solid #2136a3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:6px 10px;
+  text-decoration:none;
 }
 .button-preview{
-  background-color: #af5224;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 70%;
+  background-color: #db9647;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:2px solid #2136a3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:10px 17px;
+  text-decoration:none;
 }
 
+.add-to-basket:hover {
+  background-color:#3434f7;
+}
+.add-to-basket:active {
+  position:relative;
+  top:1px;
+}

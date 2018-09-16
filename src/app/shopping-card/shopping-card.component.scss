@@ -1,20 +1,113 @@
-h1{
+/*h1{
   display: flex;
   justify-content: center;
+}*/
+
+.main{
+  display: flex;
+  flex-flow: column;
+
+
 }
 
 .basket {
-  margin: 0 auto;
-  height: 400px;
-  display: table;
-  justify-content: right;
-  background-color: orange;
-  width: 40%;
-  border: solid 2px;
+
+  flex-flow: column;
+  margin-left: 20%;
+  margin-top: 25px;
+  position: absolute;
+  background-color: #ccd6d0;
+  opacity: 0.85;
+  width: 750px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  display: flex;
+  z-index: 15;
+
+  div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px;
+
+  }
+
+}
+.value{
+  flex-grow: 1;
+  flex-flow: column;
+
+}
+/*.back{
+  text-align: center;
+  flex-grow: 1;
+  flex-flow: column;
+
+}*/
+
+.basket-item{
+  display: flex;
 }
 
+.button-delete{
+  flex-grow: 1;
+  flex-flow: column;
+  background-color:#1880db;
+
+  border-radius:28px;
+  border:2px solid #2136a3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:21px;
+  font-weight:bold;
+  padding:6px 10px;
+  text-decoration:none;
+}
+
+.button-delete:hover {
+  background-color:#3434f7;
+}
+.button-delete:active {
+  position:relative;
+  top:1px;
+}
+
+.lastElements{
+  display: flex;
+}
+
+.back {
+  text-align: center;
+  font-family: Arial;
+  background-color: #0a4ec4;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 30px;
+  border: 2px solid #325fd1;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 19px;
+
+  padding: 11px 42px;
+
+
+  .back:hover {
+    background-color: #3434f7;
+  }
+  .back:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+
+/*
 .basket-item {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
 }
 
@@ -28,3 +121,4 @@ h1{
   display: flex;
   align-items: center;
 }
+*/

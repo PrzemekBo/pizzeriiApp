@@ -1,20 +1,27 @@
-<div class="basket">
-  <h1>Koszyk</h1>
-  <div class="basket-items">
-    <div class="basket-item" *ngFor="let dish of dishes">
-      <div class="description">
-        <h3>{{dish.name}}</h3>
-        <p>{{dish.description}}</p>
+<div class="main">
+  <div class="basket">
+    <h1>Koszyk</h1>
+    <div class="basket-items">
+      <div class="basket-item" *ngFor="let dish of dishes">
+        <div class="description">
+          <h3>{{dish.name}}</h3>
+          <p>{{dish.description}}</p>
+        </div>
+        <div class="price">
+          <p>Price: {{dish.price}}</p>
+        </div>
+        <div >
+          <button class="button-delete" (click)="deleteFromBasket(dishes.indexOf(dish))">Usun
+          </button>
+        </div>
       </div>
-      <div class="price">
-        <p>Price: {{dish.price}}</p>
-      </div>
-      <div class="button-delete">
-        <button (click)="deleteFromBasket(dishes.indexOf(dish))">Usun
-        </button>
+      <div class="lastElements">
+      <a class="value">Wartosc koszyka: {{service.calculateBasketCost()}} </a>
+      <button class="back" routerLink="/">Powrot</button>
       </div>
     </div>
   </div>
-  <p>Wartosc koszyka: {{service.calculateBasketCost()}} </p>
+
+
+
 </div>
-<a routerLink="/">Powrot</a>
