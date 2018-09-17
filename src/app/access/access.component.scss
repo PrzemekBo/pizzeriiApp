@@ -30,8 +30,12 @@ form{
 }
 
 .login-panel{
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 500px;
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+
   padding-top: 60px;
 }
 
@@ -51,6 +55,8 @@ input{
 
 label{
   background-color:#44c767;
+  margin-right: 15px;
+
 
   border-radius:28px;
   border:2px solid #18ab29;
@@ -60,5 +66,21 @@ label{
   font-family:Arial;
   font-size:17px;
   padding:14px 43px;
+  margin-bottom: 15px;
 
+}
+
+.login-format{
+  display: flex;
+  flex-flow: column;
+
+}
+.save-button{
+  display: flex;
+  justify-content: center;
+
+}
+
+.log-button{
+  margin-right: 15px;
 }

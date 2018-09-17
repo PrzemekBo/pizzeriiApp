@@ -4,14 +4,14 @@ import {DishesService} from './dishes.service';
 import {Dish} from '../models/dish.model';
 import {HttpClientModule} from '@angular/common/http';
 
-describe('DishesService', () => {
+fdescribe('DishesService', () => {
 
 
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [DishesService],
-      imports: [HttpClientModule]
+      imports: [HttpClientModule],
     });
   });
 

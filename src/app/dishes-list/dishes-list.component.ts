@@ -29,7 +29,6 @@ export class DishesListComponent implements OnInit {
 
   }
 
-
   getPasta(): void {
     this.dishes$ = this.service.getPasta();
   }

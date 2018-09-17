@@ -8,9 +8,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {Order} from '../models/order.model';
 import {of} from 'rxjs';
-import {Router} from '@angular/router';
 
-describe('FormAddressComponent', () => {
+fdescribe('FormAddressComponent', () => {
   let component: FormAddressComponent;
   let fixture: ComponentFixture<FormAddressComponent>;
 
@@ -23,7 +22,7 @@ describe('FormAddressComponent', () => {
         DishesService,
       ],
       imports: [ReactiveFormsModule,
-        HttpClientModule ]
+        HttpClientModule]
     })
       .compileComponents();
   }));

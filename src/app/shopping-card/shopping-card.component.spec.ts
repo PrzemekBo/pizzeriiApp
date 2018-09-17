@@ -1,12 +1,11 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ShoppingCardComponent} from './shopping-card.component';
-import {ShoppingCardService} from './shopping-card.service';
 import {DishesService} from '../dishes-list/dishes.service';
 import {HttpClientModule} from '@angular/common/http';
 import {Dish} from '../models/dish.model';
 
-describe('ShoppingCardComponent', () => {
+fdescribe('ShoppingCardComponent', () => {
   let component: ShoppingCardComponent;
   let fixture: ComponentFixture<ShoppingCardComponent>;
 
@@ -56,7 +55,6 @@ describe('ShoppingCardComponent', () => {
 
     expect(deleteFromBasket).toHaveBeenCalled();
   });
-
 
 
 });

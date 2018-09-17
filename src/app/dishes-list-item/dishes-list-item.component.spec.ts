@@ -7,9 +7,10 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientModule} from '@angular/common/http';
 import {Dish} from '../models/dish.model';
 
-describe('DishesListItemComponent', () => {
+fdescribe('DishesListItemComponent', () => {
   let component: DishesListItemComponent;
   let fixture: ComponentFixture<DishesListItemComponent>;
+  let dish: Dish;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,6 +27,8 @@ describe('DishesListItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DishesListItemComponent);
     component = fixture.componentInstance;
+    dish = <Dish>{};
+    component.dish = dish;
     fixture.detectChanges();
   });
 
@@ -34,11 +37,12 @@ describe('DishesListItemComponent', () => {
   });
 
 
-  //TODO
   it('should call addDishToBasket from DishesService', () => {
-    let dish: Dish = <Dish>{};
+
+
     const dishesService = TestBed.get(DishesService);
-    const addDishToShoppingCard = spyOn(dishesService, 'addDishToShoppingCard');
+    const addDishToShoppingCard = spyOn(dishesService, 'addDishToShoppingCard')
+    ;
 
     component.addFoodToCard();
 

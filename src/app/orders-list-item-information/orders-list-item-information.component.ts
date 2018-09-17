@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Order} from '../models/order.model';
 import {Subscription} from 'rxjs';
 import {OrderService} from '../orders-list/order.service';
@@ -14,8 +14,10 @@ export class OrdersListItemInformationComponent implements OnInit {
   order: Order;
   sub: Subscription;
 
+
   constructor(readonly ordersService: OrderService,
-              readonly route: ActivatedRoute) { }
+              readonly route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -23,22 +25,22 @@ export class OrdersListItemInformationComponent implements OnInit {
     this.ordersService.getOrder(+id).subscribe(res => this.order = res);
   }
 
-  changeStatusOfOrderToAccepted(){
+  changeStatusOfOrderToAccepted() {
     this.order.state = 'Accepted';
     this.sub = this.ordersService.changeOrderStatus(this.order).subscribe();
   }
 
-  changeStatusOfOrderToSend(){
+  changeStatusOfOrderToSend() {
     this.order.state = 'Send';
     this.sub = this.ordersService.changeOrderStatus(this.order).subscribe();
   }
 
-  changeStatusOfOrderToDelivered(){
+  changeStatusOfOrderToDelivered() {
     this.order.state = 'Delivered';
     this.sub = this.ordersService.changeOrderStatus(this.order).subscribe();
   }
 
-  changeStatusOfOrderToProblems(){
+  changeStatusOfOrderToProblems() {
     this.order.state = 'Problems';
     this.sub = this.ordersService.changeOrderStatus(this.order).subscribe();
   }

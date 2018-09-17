@@ -1,15 +1,16 @@
 <div class="login-panel">
-<div [formGroup]="accessForm" class="login-format">
-  <label>Name:
-    <input type="text" formControlName="name"/>
-  </label>
-  <label>Password:
-    <input type="password" formControlName="password"/>
-  </label>
-</div>
+  <div [formGroup]="accessForm" class="login-format">
+    <label>Name:
+      <input type="text" formControlName="name"/>
+    </label>
+    <label>Password:
+      <input type="password" formControlName="password"/>
+    </label>
+  </div>
   <div class="save-button">
-  <button class="save-button" type="submit" (click)="login()">Zaloguj</button>
-</div>
+    <button class="log-button" type="submit" (click)="login()">Zaloguj</button>
+    <button class="backToMenu" href="#" routerLink="/">Strona glowna</button>
+  </div>
 
-<button class="backToMenu" href="#" routerLink="/">Strona glowna</button>
+
 </div>

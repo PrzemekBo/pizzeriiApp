@@ -8,7 +8,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {Dish} from '../models/dish.model';
 import {of} from 'rxjs';
 
-describe('DishesListItemInformationComponent', () => {
+fdescribe('DishesListItemInformationComponent', () => {
   let component: DishesListItemInformationComponent;
   let fixture: ComponentFixture<DishesListItemInformationComponent>;
 

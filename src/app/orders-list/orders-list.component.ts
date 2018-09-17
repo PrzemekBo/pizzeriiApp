@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Order} from '../models/order.model';
-import {Observable, Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 import {OrderService} from './order.service';
 
 @Component({
@@ -8,14 +8,27 @@ import {OrderService} from './order.service';
   templateUrl: './orders-list.component.html',
   styleUrls: ['./orders-list.component.scss']
 })
-export class OrdersListComponent implements OnInit {
+export class OrdersListComponent implements OnInit, OnDestroy {
 
   orders$: Observable<Order[]>;
+  interval: any;
 
-  constructor(private readonly ordersService: OrderService) { }
+  constructor(private readonly orderService: OrderService) {
+  }
 
   ngOnInit() {
-    this.orders$ = this.ordersService.getOrders();
+    this.getOrders();
+    this.interval = setInterval(() => {
+      this.getOrders();
+    }, 20000);
+  }
+
+  getOrders(): void {
+    this.orders$ = this.orderService.getOrders();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 
 }
