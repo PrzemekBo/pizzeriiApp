@@ -3,10 +3,9 @@
   justify-content: center;
 }*/
 
-.main{
+.main {
   display: flex;
   flex-flow: column;
-
 
 }
 
@@ -26,7 +25,7 @@
   display: flex;
   z-index: 15;
 
-  div{
+  div {
     flex-grow: 1;
     text-align: center;
     padding: 8px;
@@ -34,11 +33,13 @@
   }
 
 }
-.value{
+
+.value {
   flex-grow: 1;
   flex-flow: column;
 
 }
+
 /*.back{
   text-align: center;
   flex-grow: 1;
@@ -46,40 +47,42 @@
 
 }*/
 
-.basket-item{
+.basket-item {
   display: flex;
 }
 
-.button-delete{
+.button-delete {
   flex-grow: 1;
   flex-flow: column;
-  background-color:#1880db;
+  background-color: #1880db;
 
-  border-radius:28px;
-  border:2px solid #2136a3;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Trebuchet MS;
-  font-size:21px;
-  font-weight:bold;
-  padding:6px 10px;
-  text-decoration:none;
+  border-radius: 28px;
+  border: 2px solid #2136a3;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Trebuchet MS;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
 }
 
 .button-delete:hover {
-  background-color:#3434f7;
-}
-.button-delete:active {
-  position:relative;
-  top:1px;
+  background-color: #3434f7;
 }
 
-.lastElements{
+.button-delete:active {
+  position: relative;
+  top: 1px;
+}
+
+.lastElements {
   display: flex;
 }
 
 .back {
+  margin-right: 25px;
   text-align: center;
   font-family: Arial;
   background-color: #0a4ec4;
@@ -93,15 +96,41 @@
   font-size: 19px;
 
   padding: 11px 42px;
+}
 
+.back:hover {
+  background-color: #3434f7;
+}
 
-  .back:hover {
-    background-color: #3434f7;
-  }
-  .back:active {
-    position: relative;
-    top: 1px;
-  }
+.back:active {
+  position: relative;
+  top: 1px;
+}
+
+.orderButton {
+
+  text-align: center;
+  font-family: Arial;
+  background-color: #0a4ec4;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 30px;
+  border: 2px solid #325fd1;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 19px;
+
+  padding: 11px 42px;
+}
+
+.orderButton:hover {
+  background-color: #3434f7;
+}
+
+.orderButton:active {
+  position: relative;
+  top: 1px;
 }
 
 

@@ -1,6 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DishesListItemComponent } from './dishes-list-item.component';
+import {DishesListItemComponent} from './dishes-list-item.component';
+import {DishesService} from '../dishes-list/dishes.service';
+import {AccessService} from '../access/access.service';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientModule} from '@angular/common/http';
+import {Dish} from '../models/dish.model';
 
 describe('DishesListItemComponent', () => {
   let component: DishesListItemComponent;
@@ -8,9 +13,14 @@ describe('DishesListItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DishesListItemComponent ]
+      declarations: [DishesListItemComponent],
+      providers: [DishesService,
+        AccessService],
+      imports: [
+        RouterTestingModule,
+        HttpClientModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +31,17 @@ describe('DishesListItemComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+
+  //TODO
+  it('should call addDishToBasket from DishesService', () => {
+    let dish: Dish = <Dish>{};
+    const dishesService = TestBed.get(DishesService);
+    const addDishToShoppingCard = spyOn(dishesService, 'addDishToShoppingCard');
+
+    component.addFoodToCard();
+
+    expect(addDishToShoppingCard).toHaveBeenCalledWith(dish);
   });
 });

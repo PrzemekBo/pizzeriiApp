@@ -60,7 +60,7 @@
         2,
         1
       ],
-      "state": "Accepted",
+      "state": "Problems",
       "date": "2018-09-12T14:10:02.653Z",
       "id": 1
     },
@@ -71,22 +71,13 @@
       "email": null,
       "city": null,
       "street": null,
-      "dishIds": [],
-      "state": "Accepted",
-      "date": "2018-09-13T21:03:26.945Z",
+      "dishIds": [
+        1,
+        4
+      ],
+      "state": "Send",
+      "date": "2018-09-17T10:04:05.215Z",
       "id": 2
-    },
-    {
-      "firstName": null,
-      "lastName": null,
-      "telephone": null,
-      "email": null,
-      "city": null,
-      "street": null,
-      "dishIds": [],
-      "state": "Accepted",
-      "date": "2018-09-14T11:41:48.010Z",
-      "id": 3
     }
   ]
 }

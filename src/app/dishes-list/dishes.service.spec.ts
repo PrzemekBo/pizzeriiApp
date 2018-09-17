@@ -5,6 +5,9 @@ import {Dish} from '../models/dish.model';
 import {HttpClientModule} from '@angular/common/http';
 
 describe('DishesService', () => {
+
+
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [DishesService],
@@ -47,7 +50,9 @@ describe('DishesService', () => {
     service.addDishToShoppingCard(dish);
     service.addDishToShoppingCard(dish);
     service.addDishToShoppingCard(dish);
+    service.addDishToShoppingCard(dish);
+    service.addDishToShoppingCard(dish);
 
-    expect(service.calculateBasketCost()).toBe(30);
+    expect(service.calculateBasketCost()).toBe(50);
   }));
 });

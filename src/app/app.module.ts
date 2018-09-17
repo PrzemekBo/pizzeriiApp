@@ -17,6 +17,8 @@ import { OrdersListItemComponent } from './orders-list-item/orders-list-item.com
 import { OrdersListItemInformationComponent } from './orders-list-item-information/orders-list-item-information.component';
 import { AccessComponent } from './access/access.component';
 import { DishesListItemInformationComponent } from './dishes-list-item-information/dishes-list-item-information.component';
+import {AuthGuard} from './auth/auth.guard';
+import {Router} from '@angular/router';
 
 
 @NgModule({
@@ -41,7 +43,7 @@ import { DishesListItemInformationComponent } from './dishes-list-item-informati
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

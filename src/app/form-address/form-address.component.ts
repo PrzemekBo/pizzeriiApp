@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {Dish} from '../models/dish.model';
 import {Order} from '../models/order.model';
 import {FormControl, FormGroup} from '@angular/forms';
 import {DishesService} from '../dishes-list/dishes.service';
 import {OrderService} from '../orders-list/order.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-form-address',
@@ -46,6 +47,7 @@ export class FormAddressComponent implements OnInit {
     this.order.date = new Date();
     this.sub = this.orderService.createOrder(this.order).subscribe();
     alert('Dodano zamowienie.');
+    /*this.router.navigate(['/login']);*/
   }
 
 
@@ -54,3 +56,8 @@ export class FormAddressComponent implements OnInit {
     this.dishes.forEach(dish => this.dishesIds.push(dish.id));
   }
 }
+
+/*
+private router: Router,
+
+  this.router.navigate(['/login']);*/
